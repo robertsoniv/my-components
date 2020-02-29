@@ -2,9 +2,9 @@
   "name": "my-module",
   "version": "1.0.0",
   "description": "",
-  "main": "build/index.js",
-  "module": "build/index.es.js",
-  "jsnext:main": "build/index.es.js",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "jsnext:main": "dist/index.es.js",
   "scripts": {
     "build": "rollup -c",
     "lint": "standard",
@@ -53,7 +53,8 @@
   "standard": {
     "ignore": [
       "node_modules/",
-      "build/"
+      "build/",
+      "dist/"
     ],
     "globals": [
       "describe",
