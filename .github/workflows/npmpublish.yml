@@ -12,29 +12,13 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - name: Install dependencies
+      - name: Install dependencies & build
         run: yarn
       - name: Archive production artifacts
         uses: actions/upload-artifact@v1
         with:
           name: dist
           path: dist
-      - name: Upload test artifact
-        uses: actions/upload-artifact@v1 
-        with:
-          name: test-artifact
-  test:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-      - name: Download artifact
-        uses: actions/download-artifact@v1
-        with:
-          name: test-artifact
       - name: Run tests
         run: yarn test
       - name: Archive code coverage results
@@ -43,7 +27,7 @@ jobs:
           name: code-coverage-report
           path: coverage
   publish:
-    needs: test
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -51,7 +35,7 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-          scope: '@robertsoniv'
+          scope: "@robertsoniv"
       - name: Download production artifacts
         uses: actions/download-artifact@v1
         with:
