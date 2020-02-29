@@ -1,9 +1,11 @@
 import React from "react";
 
-interface Props {}
+interface Props {
+  change?: boolean;
+}
 
-const MyComponent: React.FunctionComponent<Props> = () => (
-  <div role="heading">My First Component</div>
+const MyComponent: React.FunctionComponent<Props> = props => (
+  <div role="heading">My First Component {props.change ? "Change" : ""}</div>
 );
 
 export default MyComponent;
