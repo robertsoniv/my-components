@@ -1,10 +1,15 @@
 {
   "name": "robertsoniv-example-components",
   "version": "0.0.1-beta.1",
-  "description": "",
+  "description": "Learning about publishing component libraries",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robertsoniv/my-components.git"
+  },
+  "homepage": "https://robertsoniv.github.io/my-components",
   "scripts": {
     "build": "rollup -c",
     "lint": "standard",
@@ -13,8 +18,13 @@
     "storybook": "start-storybook",
     "build-storybook": "build-storybook -c .storybook -o docs"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "React",
+    "ReactJS",
+    "Components",
+    "Library"
+  ],
+  "author": "@robertsoniv",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.7.7",
