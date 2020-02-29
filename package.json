@@ -1,6 +1,6 @@
 {
   "name": "robertsoniv-example-components",
-  "version": "0.0.1-beta.1",
+  "version": "0.0.3",
   "description": "Learning about publishing component libraries",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
