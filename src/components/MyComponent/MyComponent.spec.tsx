@@ -7,3 +7,8 @@ test("Renders", async () => {
   const { getByRole } = render(<MyComponent />);
   expect(getByRole("heading")).toHaveTextContent("My First Component");
 });
+
+test("Renders with Change", async () => {
+  const { getByRole } = render(<MyComponent change={true} />);
+  expect(getByRole("heading")).toHaveTextContent("My First Component Change");
+});
