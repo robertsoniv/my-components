@@ -65,8 +65,8 @@ jobs:
           scope: '@robertsoniv'
       - name: Download production artifacts
         uses: actions/download-artifact@v1
-          with:
-            name: dist
+        with:
+          name: dist
       - name: Publish npm package
         run: yarn publish --access=public
         env:
