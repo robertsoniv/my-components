@@ -1,6 +1,6 @@
 {
   "name": "@rwatt451/component-library",
-  "version": "0.0.3",
+  "version": "0.0.4-beta.4",
   "description": "A template for creating component libraries",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
