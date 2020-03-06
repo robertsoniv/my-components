@@ -1,7 +1,7 @@
 import * as React from "react";
 import { render } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
-import { AnotherComponent } from "../../index";
+import AnotherComponent from "./../components/AnotherComponent";
 
 test("Renders", async () => {
   const { getByRole } = render(<AnotherComponent />);

@@ -4,6 +4,8 @@
 coverage/
 docs/
 src/
+dist/stories/
+dist/tests/
 
 #Files
 .gitignore
