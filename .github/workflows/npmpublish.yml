@@ -16,6 +16,9 @@ jobs:
         run: yarn
       - name: Build project
         run: yarn build
+        env:
+          STORYBOOK_ANONYMOUS_CLIENT_ID: ${{secrets.STORYBOOK_ANONYMOUS_CLIENT_ID}}
+          STORYBOOK_ANONYMOUS_SCOPE: ${{secrets.STORYBOOK_ANONYMOUS_SCOPE}}
       - name: Archive production artifacts
         uses: actions/upload-artifact@v1
         with:

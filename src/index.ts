@@ -1,6 +1,5 @@
-import useAnonymousAuth from "./hooks/useAnonymousAuth";
-import useCurrentUser from "./hooks/useCurrentUser";
-import MyComponent from "./components/MyComponent";
-import AnotherComponent from "./components/AnotherComponent";
+import useAuth from "./hooks/useAuth";
 
-export { MyComponent, AnotherComponent, useAnonymousAuth, useCurrentUser };
+import ExampleComponent from "./components/ExampleComponent";
+
+export { useAuth, ExampleComponent };

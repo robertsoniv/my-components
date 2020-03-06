@@ -6,8 +6,7 @@ import pkg from "./package.json";
 
 export default {
   input: "src/index.ts",
-  output: [
-    {
+  output: [{
       file: pkg.main,
       format: "cjs",
       exports: "named",
@@ -25,7 +24,7 @@ export default {
     resolve(),
     typescript({
       rollupCommonJSResolveHack: true,
-      exclude: ["./tests/**", "./stories/**"],
+      exclude: ["**/tests/**/*.d.ts", "**/stories/**/*.d.ts"],
       clean: true
     }),
     commonjs({
